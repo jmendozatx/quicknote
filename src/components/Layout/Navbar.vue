@@ -2,7 +2,8 @@
     <nav class="navbar is-success" role="navigation" aria-label="main navigation">
         <div class="container is-max-desktop px-2">
             <div class="navbar-brand">
-                <div class="navbar-item is-size-4 is-family-monospace">QuickNotes</div>
+                <div class="navbar-item is-size-4 is-family-monospace"> <img :src="logo" width="112" height="28">uickNotes
+                </div>
 
                 <a role="button" :class="{ 'is-active': showMobileMenu }" class="navbar-burger" aria-label="menu"
                     aria-expanded="false" data-target="navbarBasicExample" @click.prevent="showMobileMenu = !showMobileMenu"
@@ -35,6 +36,7 @@
 import { ref } from 'vue'
 import { onClickOutside } from '@vueuse/core'
 import { useStoreAuth } from '@/stores/storeAuth'
+import logo from '@/assets/logo.svg'
 
 //Store
 const storeAuth = useStoreAuth()
@@ -60,6 +62,10 @@ const logout = () => {
 </script>
 
 <style>
+.navbar-brand img {
+    width: 28px;
+}
+
 @media (max-width: 1023px) {
     .navbar-menu {
         position: absolute;
