@@ -5,9 +5,9 @@
                 <div class="navbar-item is-size-4 is-family-monospace"> <img :src="logo" width="112" height="28">uickNotes
                 </div>
 
-                <a role="button" :class="{ 'is-active': showMobileMenu }" class="navbar-burger" aria-label="menu"
-                    aria-expanded="false" data-target="navbarBasicExample" @click.prevent="showMobileMenu = !showMobileMenu"
-                    ref="navBarBurgerRef">
+                <a v-if="storeAuth.user.id" role="button" :class="{ 'is-active': showMobileMenu }" class="navbar-burger"
+                    aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"
+                    @click.prevent="showMobileMenu = !showMobileMenu" ref="navBarBurgerRef">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
