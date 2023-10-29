@@ -1,6 +1,5 @@
 # Ignore Firebase files
-/.firebasesrc
-/js/firebase.js
+.firebasesrc
 
 # Logs
 logs
@@ -13,10 +12,12 @@ lerna-debug.log*
 
 node_modules
 .DS_Store
+src/js/
 dist
 dist-ssr
 coverage
 *.local
+
 
 /cypress/videos/
 /cypress/screenshots/

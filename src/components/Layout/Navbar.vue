@@ -13,11 +13,8 @@
                 </a>
             </div>
 
-            <div id="navbarBasicExample" class="navbar-menu" :class="{ 'is-active': showMobileMenu }" ref="navBarMenuRef">
-                <div class="navbar-start">
-                    <button v-if="storeAuth.user.id" @click="logout" class="button is-small is-info mt-3 ml-3">Log
-                        Out, {{ storeAuth.user.email }}</button>
-                </div>
+            <div v-if="storeAuth.user.id" id="navbarBasicExample" class="navbar-menu"
+                :class="{ 'is-active': showMobileMenu }" ref="navBarMenuRef">
                 <div class="navbar-end">
                     <RouterLink @click="showMobileMenu = false" class="navbar-item" to="/" active-class="is-active">
                         Notes
@@ -25,6 +22,8 @@
                     <RouterLink @click="showMobileMenu = false" class="navbar-item" to="/stats" active-class="is-active">
                         Stats
                     </RouterLink>
+                    <button @click="logout" class="button is-small is-info mt-3 ml-3">Log
+                        Out, {{ storeAuth.user.email }}</button>
                 </div>
             </div>
         </div>
